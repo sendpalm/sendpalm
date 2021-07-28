@@ -17,7 +17,6 @@ const options = {
 
 request(options, (error, response, body) => { 
   if (error) throw new Error(error)
-
   console.log(body) 
 })       
 
