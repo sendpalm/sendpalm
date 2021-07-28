@@ -1,4 +1,4 @@
-# sendpalm-verify
+# SendPalm Email Verify
 
 ## Install
 
