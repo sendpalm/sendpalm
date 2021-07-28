@@ -1,0 +1,3 @@
+[submodule "verify"]
+	path = verify
+	url = https://github.com/sendpalm/sendpalm-verify
