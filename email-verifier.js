@@ -7,7 +7,7 @@ const options = {
 
   headers: { 
     'content-type': 'application/json', 
-    'authorization': '6100013956d77b69cf6e9739' // your AUTH_TOKEN
+    'authorization': '' // your AUTH_TOKEN
   }, 
   body: { 
     toEmail: 'service@sendpalm.com' //fromEmail is optional parameter,toEmail is a required parameter

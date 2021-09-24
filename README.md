@@ -1,8 +1,8 @@
-# SendPalm Email Verify
+# SendPalm Email Api
 
 ## Install
 
-> npm install sendpalm-verify
+> npm install sendpalm
 
 ## Usage
 
@@ -11,19 +11,23 @@
 2. Use in file:
 
    ```javascript
-   import EmailValidator from 'sendpalm-verify'
-   
-   async function demo() {
-       const emailValidator = new EmailValidator("your auth token")
-       const result = await emailValidator.verify("email address")
-       console.log(result)
+   import Email from 'sendpalm'
+
+   const email = new Email("your token")
+
+   async function verify() {
+     const result = await email.verify("email address")
+     console.log(result)
    }
-   demo()
+   async function send() {
+     const result = await email.send(fromEmail, toEmail, subject, content)
+     console.log(result)
+   }
    ```
 
    
 
-## Response
+## Verification Response
 
 For example, the verification email is service@sendpalm.com:
 
