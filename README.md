@@ -14,6 +14,7 @@
    import Email from 'sendpalm'
 
    const email = new Email("your token")
+   
    // Email Verify
    async function verify() {
      const result = await email.verify("email address")
