@@ -14,11 +14,13 @@
    import Email from 'sendpalm'
 
    const email = new Email("your token")
-
+   // Email Verify
    async function verify() {
      const result = await email.verify("email address")
      console.log(result)
    }
+   
+   // Send transactional emails
    async function send() {
      const result = await email.send(fromEmail, toEmail, subject, content)
      console.log(result)
