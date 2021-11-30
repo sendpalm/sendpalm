@@ -26,15 +26,12 @@
      const result = await email.send(fromEmail, toEmail, subject, content)
      console.log(result)
    }
-   
    // Campaign sending
    async function sendCampaign() {
        const result = await email.sendCampaign(fromEmail, toEmail, subject, campaignId)
        console.log(result)
    }
    ```
-   
-   
 
 ## Verification Response
 
