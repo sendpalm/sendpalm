@@ -27,7 +27,7 @@
      console.log(result)
    }
    
-// Campaign send
+   // Campaign send
    async function sendCamPaign() {
        const result = await email.sendCamPaign(fromEmail, toEmail, subject, campaignId)
        console.log(result)
