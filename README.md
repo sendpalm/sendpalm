@@ -11,7 +11,10 @@
 2. Use in file:
 
    ```javascript
+   //ES6
    import Email from 'sendpalm'
+   //CommonJS
+   //const Email = require('sendpalm')
 
    const email = new Email("your token")
    
