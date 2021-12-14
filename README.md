@@ -34,9 +34,35 @@
        const result = await email.sendCampaign(fromEmail, toEmail, subject, campaignId, templateParams)
        console.log(result)
    }
+   // Send transactional emails with params
+   async function sendWithParams() {
+     const params = {
+       fromEmail: "fromEmail",
+       toEmail: "toEmail",
+       subject: "Welcome use SendPalm Email API",
+       content: "Hi All,Welcome use SendPalm Email API",
+       delay: 20,//minutes
+     };
+     const result = await email.sendWithParams(params);
+     console.log(result);
+   }
+   // Campaign sending with params
+   async function sendCampaignWithParams() {
+     const params = {
+       fromEmail: "fromEmail",
+       toEmail: "toEmail",
+       subject: "Welcome use SendPalm Email API",
+       campaignId: "1234",
+       delay: 20,
+     };
+     const result = await email.sendCampaignWithParams(params);
+     console.log(result);
+   }
    ```
 
-## Verification Response
+## Verification
+
+##  Response
 
 For example, the verification email is service@sendpalm.com:
 
