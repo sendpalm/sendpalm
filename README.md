@@ -23,7 +23,6 @@
      const result = await email.verify("email address")
      console.log(result)
    }
-   
    // Send transactional emails
    async function send() {
      const result = await email.send(fromEmail, toEmail, subject, content, templateParams)
@@ -34,7 +33,7 @@
        const result = await email.sendCampaign(fromEmail, toEmail, subject, campaignId, templateParams)
        console.log(result)
    }
-   //Email verify with params
+   // Email verify with params
    async function verifyWithParams(){
      const params = {
        fromEmail: "fromEmail",
@@ -70,6 +69,17 @@
      };
      const result = await email.sendCampaignWithParams(params);
      console.log(result);
+   }
+   // New Audience with params
+   async function newAudienceWithParams() {
+     const params = {
+        email: "email",
+        fullname: "test",
+        listId: "listId",
+        phone: "1212121212"
+      }
+      const result = await email.newAudienceWithParams(params);
+      console.log(result);
    }   
    ```
 
@@ -130,3 +140,4 @@ When you input an email address, Reacher starts analyzing the email in 4 areas.
 2. 🌐 **Domain Name Checks**: Domain checking ensures that the email address contains a valid internet domain name, and validates if the featured domain is configured to accept mail.
 3. ⚙️ **SMTP Checks**: This function checks that the address segment before the ‘@’ sign is a valid mailbox. This is the clever part, and what sets our service apart from many others.
 4. 💡 **Misc Checks**: This function checks some miscelleanous information about the email address. As of today, it only checks if the email address is disposable, but we're looking to add checks around whether the email provider is free or not, if it's an role-based email address, or if it has been compromised in data breaches.
+
