@@ -1,6 +1,6 @@
 # SendPalm Email Api
 
-## Install
+## Installation
 
 > npm install sendpalm
 
@@ -15,7 +15,7 @@
    import Email from 'sendpalm'
    //CommonJS
    //const Email = require('sendpalm')
-
+   
    const email = new Email("your token")
    
    // Email Verify
@@ -34,6 +34,17 @@
        const result = await email.sendCampaign(fromEmail, toEmail, subject, campaignId, templateParams)
        console.log(result)
    }
+   //Email verify with params
+   async function verifyWithParams(){
+     const params = {
+       fromEmail: "fromEmail",
+       listId: "listId",
+       phone: "phone",
+       toEmail: "toEmail",
+     };
+     const result = await email.verifyWithParams(params);
+     console.log(result)
+   }
    // Send transactional emails with params
    async function sendWithParams() {
      const params = {
@@ -41,6 +52,7 @@
        toEmail: "toEmail",
        subject: "Welcome use SendPalm Email API",
        content: "Hi All,Welcome use SendPalm Email API",
+       templateParams: {"campany":"SendPalm Inc."},
        delay: 20,//minutes
      };
      const result = await email.sendWithParams(params);
@@ -53,11 +65,12 @@
        toEmail: "toEmail",
        subject: "Welcome use SendPalm Email API",
        campaignId: "1234",
+       templateParams: {"campany":"SendPalm Inc."},
        delay: 20,
      };
      const result = await email.sendCampaignWithParams(params);
      console.log(result);
-   }
+   }   
    ```
 
 ## Verification
