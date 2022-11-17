@@ -80,7 +80,37 @@
       }
       const result = await email.newAudienceWithParams(params);
       console.log(result);
-   }   
+   }
+   // Verify email with your webhook
+   async function verifyWithWebhook() {
+     const params = {
+        fromEmail: "fromEmail",
+        listId: "listId",
+        phone: "phone",
+        toEmail: "toEmail",
+        webhook_url: "your url",
+      }
+      const result = await email.verifyWithWebhook(params);
+      console.log(result);
+   }
+   // Find mail with Domain
+   async function findWithDomain() {
+     const params = {
+        domain:"domain.com",
+      }
+      const result = await email.findWithDomain(params);
+      console.log(result);
+   }
+   // Find mail with name
+   async function findWithName() {
+     const params = {
+        first_name: "first_name",
+        last_name: "last_name",
+        domain: "domain.com",
+      }
+      const result = await email.findWithName(params);
+      console.log(result);
+   }
    ```
 
 ## Verification
